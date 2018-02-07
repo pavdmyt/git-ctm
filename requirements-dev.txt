@@ -1,6 +1,7 @@
 flake8
 isort
 pylint
+pex
 
 # required for `python setup.py check --restructuredtext -s`
 docutils
