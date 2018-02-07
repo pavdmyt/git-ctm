@@ -5,6 +5,9 @@ import os
 from docopt import docopt
 
 
+__version__ = '0.1.0'
+
+
 CLI_SPEC = """\
 Usage:  ctm -d <date> -m <msg>
         ctm -p
@@ -12,6 +15,9 @@ Usage:  ctm -d <date> -m <msg>
   -d <date>      Commit date and time
   -m <msg>       Commit message
   -p             Print date template
+
+  --help         Print usage
+  --version      Print version
 
 """
 
@@ -25,7 +31,7 @@ DATE_TMPL = 'Wed Feb 7 11:11:11 2018 +0200'
 
 
 def main():
-    args = docopt(CLI_SPEC)
+    args = docopt(CLI_SPEC, version=__version__)
     date = args['-d']
     msg = args['-m']
     print_tmpl = args['-p']
