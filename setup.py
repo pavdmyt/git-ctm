@@ -26,13 +26,13 @@ required = [
 ]
 
 setup(
-    name='ctm',
+    name='git-ctm',
     version='0.1.0',
     description='Git commit time machine.',
     long_description=long_description,
     author='Pavlo Dmytrenko',
     author_email='mail@pavdmyt.com',
-    url='https://github.com/pavdmyt/ctm',
+    url='https://github.com/pavdmyt/git-ctm',
     py_modules=['ctm'],
     install_requires=required,
     license='MIT',
