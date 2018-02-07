@@ -1,0 +1,7 @@
+flake8
+isort
+pylint
+
+# required for `python setup.py check --restructuredtext -s`
+docutils
+pygments
