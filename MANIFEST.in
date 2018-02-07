@@ -1,0 +1,4 @@
+include README.rst LICENSE
+include requirements.txt
+include requirements-dev.txt
+include requirements-pex.txt

@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os
 import codecs
+import os
 
 from setuptools import setup
+
 
 try:
     # Python 3
@@ -17,6 +18,13 @@ except ImportError:
 here = os.path.abspath(dirname(__file__))
 
 
+def read_version(module_name):
+    with open(module_name, 'r') as fd:
+        for line in fd:
+            if line.startswith('__version__ = '):
+                return line.split()[-1].strip().strip("'")
+
+
 with codecs.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = '\n' + f.read()
 
@@ -25,24 +33,34 @@ required = [
     'docopt',
 ]
 
+
 setup(
     name='git-ctm',
-    version='0.1.0',
-    description='Git commit time machine.',
-    long_description=long_description,
+    version=read_version('ctm.py'),
     author='Pavlo Dmytrenko',
     author_email='mail@pavdmyt.com',
+    license='MIT',
+    description='Git commit time machine.',
+    long_description=long_description,
     url='https://github.com/pavdmyt/git-ctm',
+    download_url='https://github.com/pavdmyt/git-ctm/archive/master.zip',
     py_modules=['ctm'],
     install_requires=required,
-    license='MIT',
     entry_points={
         'console_scripts': [
             'ctm = ctm:main',
         ]
     },
+    platforms=['any'],
     classifiers=[
+        'Intended Audience :: Developers',
+        'Intended Audience :: System Administrators',
+        'Operating System :: OS Independent',
+        'Development Status :: 3 - Alpha',
+        'Natural Language :: English',
+        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
