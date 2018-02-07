@@ -21,7 +21,7 @@ CMD_TMPL = ("GIT_AUTHOR_DATE='{date}' "
             "git commit -m '{msg}'")
 
 
-DATE_TMPL = 'Sun Feb 7 11:11:11 2018 +0200'
+DATE_TMPL = 'Wed Feb 7 11:11:11 2018 +0200'
 
 
 def main():
