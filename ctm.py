@@ -1,5 +1,15 @@
 # -*- coding: utf-8 -*-
 
+"""
+git Commit Time Machine
+~~~~~~~~~~~~~~~~~~~~~~~
+
+A command-line tool for easy commits with desired timestamp.
+
+:copyright: (c) 2018 by Pavlo Dmytrenko.
+:license: MIT, see LICENSE for more details.
+"""
+
 from __future__ import print_function
 
 import os
