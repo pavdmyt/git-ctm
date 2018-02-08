@@ -32,8 +32,24 @@ CMD_TMPL = ("GIT_AUTHOR_DATE='{date}' "
 DATE_TMPL = 'Wed Feb 7 11:11:11 2018 +0200'
 
 
+VERSION_TMPL = """\
+
+     ██████╗████████╗███╗   ███╗
+    ██╔════╝╚══██╔══╝████╗ ████║
+    ██║        ██║   ██╔████╔██║
+    ██║        ██║   ██║╚██╔╝██║
+    ╚██████╗   ██║   ██║ ╚═╝ ██║
+     ╚═════╝   ╚═╝   ╚═╝     ╚═╝
+
+       git Commit Time Machine
+  https://github.com/pavdmyt/git-ctm
+
+           VERSION %s
+"""
+
+
 def main():
-    args = docopt(CLI_SPEC, version=__version__)
+    args = docopt(CLI_SPEC, version=VERSION_TMPL % __version__)
     date = args['-d']
     msg = args['-m']
     print_tmpl = args['-p']
