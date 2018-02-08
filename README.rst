@@ -16,6 +16,8 @@ Sometimes you need to create a commit with particular timestamp.
      GIT_COMMITTER_DATE='Thu Feb 8 03:14:15 2018 +0200' \
      git commit -m 'my commit message'
 
+*All commits in this project are done with ``ctm`` itself.*
+
 
 Installation
 ------------
@@ -34,7 +36,15 @@ Or install the latest sources from GitHub:
     pip install https://github.com/pavdmyt/git-ctm/archive/master.zip
 
 
-Or just copy ``ctm.pex`` somewhere in the ``$PATH``.
+Or just put ``ctm`` `PEX`_ (Python EXecutable) file somewhere in the ``$PATH``:
+
+.. code:: bash
+
+    $ git clone https://github.com/pavdmyt/git-ctm.git
+    $ cd git-ctm
+    $ sudo cp ctm /usr/local/bin/
+
+Now ``ctm`` command-line tool should be available to use.
 
 
 Usage
@@ -106,3 +116,4 @@ MIT - Pavlo Dmytrenko
 
 
 .. _PyPI: https://pypi.org/
+.. _PEX: https://github.com/pantsbuild/pex
