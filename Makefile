@@ -36,9 +36,14 @@ check-rst:
 	@python setup.py check --restructuredtext -s
 
 build: rm-build
-	@echo "$(OK_COLOR)==> Building...$(NO_COLOR)"
+	@echo "$(OK_COLOR)==> Building sdist and bdist_wheel $(NO_COLOR)"
 	@python setup.py sdist
 	@python setup.py bdist_wheel --universal
+
+build-pex: rm-build build
+	@echo "$(OK_COLOR)==> Building PEX $(NO_COLOR)"
+	@./build_pex.sh
+
 
 publish: flake check-rst rm-build
 	@echo "$(OK_COLOR)==> Publishing...$(NO_COLOR)"

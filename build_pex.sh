@@ -7,6 +7,9 @@ shebang="/usr/bin/env python"
 # -c : console_script entry point
 # -v : verbose
 #
+# -f PATH/URL, --find-links=PATH/URL, --repo=PATH/URL
+#                    Additional repository path (directory or URL) to look
+#                    for requirements.
 # --python-shebang=PYTHON_SHEBANG
 #                    The exact shebang (#!...) line to add at the top of
 #                    the PEX file minus the #!.  This overrides the default
@@ -21,7 +24,8 @@ shebang="/usr/bin/env python"
 PEX_VERBOSE=5                        \
     pex                              \
     -r requirements-pex.txt          \
-    -o "ctm.pex"                     \
+    -f dist                          \
+    -o "ctm"                         \
     -c ctm                           \
     --python-shebang="$shebang"      \
     -v
