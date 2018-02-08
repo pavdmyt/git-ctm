@@ -1,5 +1,5 @@
-git-ctm |pypi| |Versions| |Wheel|
-=================================
+git-ctm |pypi| |Wheel| |Versions| |License|
+===========================================
 
 git-ctm = ``git commit`` Time Machine
 
@@ -100,6 +100,8 @@ MIT - Pavlo Dmytrenko
 .. |Versions| image:: https://img.shields.io/pypi/pyversions/git-ctm.svg
    :target: https://pypi.org/project/git-ctm/
 .. |Wheel| image:: https://img.shields.io/pypi/wheel/git-ctm.svg
+   :target: https://pypi.org/project/git-ctm/
+.. |License| image:: https://img.shields.io/pypi/l/git-ctm.svg
    :target: https://pypi.org/project/git-ctm/
 
 
