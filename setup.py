@@ -53,12 +53,13 @@ setup(
     },
     platforms=['any'],
     classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Environment :: Console',
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
-        'Operating System :: OS Independent',
-        'Development Status :: 3 - Alpha',
-        'Natural Language :: English',
         'License :: OSI Approved :: MIT License',
+        'Natural Language :: English',
+        'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
@@ -69,5 +70,9 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
+        'Topic :: Software Development',
+        'Topic :: Software Development :: Version Control',
+        'Topic :: Software Development :: Version Control :: Git',
+        'Topic :: Utilities',
     ]
 )
